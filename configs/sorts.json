@@ -1,0 +1,55 @@
+{
+    "": [
+        "about", 
+        "file system", 
+        "linux"
+    ], 
+    "file system": [
+        "beegfs", 
+        "lustre"
+    ], 
+    "file system/lustre": [
+        "lustre\u73af\u5883\u642d\u5efa.md", 
+        "lustre\u7f16\u8bd1.md", 
+        "lustre\u5f00\u53d1\u5468\u62a5", 
+        "lustre\u6545\u969c\u8ddf\u8e2a", 
+        "\u4ee3\u7801\u5206\u6790"
+    ], 
+    "linux/linux io\u6808": [
+        "linux read\u6d41\u7a0b.md", 
+        "linux bio\u6d41\u7a0b.md"
+    ], 
+    "linux": [
+        "linux io\u6808"
+    ], 
+    "__positions": {
+        "linux": 3, 
+        "about": 1, 
+        "file system/lustre/lustre\u6545\u969c\u8ddf\u8e2a": 2002004, 
+        "file system/lustre/lustre\u7f16\u8bd1.md": 2002002, 
+        "file system/lustre/lustre\u73af\u5883\u642d\u5efa.md": 2002001, 
+        "linux/linux io\u6808/linux bio\u6d41\u7a0b.md": 3001002, 
+        "file system": 2, 
+        "file system/beegfs": 2001, 
+        "file system/lustre": 2002, 
+        "linux/linux io\u6808": 3001, 
+        "file system/lustre/lustre\u5f00\u53d1\u5468\u62a5": 2002003, 
+        "file system/lustre/\u4ee3\u7801\u5206\u6790": 2002005, 
+        "linux/linux io\u6808/linux read\u6d41\u7a0b.md": 3001001
+    }, 
+    "__raw_positions": {
+        "about": 1, 
+        "linux/linux io\u6808/linux bio\u6d41\u7a0b.md": 2, 
+        "file system/lustre/lustre\u6545\u969c\u8ddf\u8e2a": 4, 
+        "file system/lustre/lustre\u7f16\u8bd1.md": 2, 
+        "file system/lustre/lustre\u73af\u5883\u642d\u5efa.md": 1, 
+        "file system/lustre/\u4ee3\u7801\u5206\u6790": 5, 
+        "linux/linux io\u6808": 1, 
+        "file system/beegfs": 1, 
+        "file system/lustre": 2, 
+        "file system": 2, 
+        "file system/lustre/lustre\u5f00\u53d1\u5468\u62a5": 3, 
+        "linux": 3, 
+        "linux/linux io\u6808/linux read\u6d41\u7a0b.md": 1
+    }
+}
