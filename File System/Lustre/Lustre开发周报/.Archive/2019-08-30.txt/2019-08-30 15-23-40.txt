@@ -1,0 +1,44 @@
+date: 2019-08-30 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 005'
+tags: Lustre开发者周报
+
+## 23. Cross-tier Unified Namespace Update
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Cross_Tier_Unified_Namespace-Chaarawi.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Cross_Tier_Unified_Namespace-Chaarawi.pdf)  
+
+通过DAOS可以实现统一命名空间
+[https://github.com/daos-stack/daos](https://github.com/daos-stack/daos) 
+DAOS主要作用是可以发挥出NVM的性能，提供一个分布式NVM存储引擎
+
+## 24. A Performance Study of Lustre File System Checker: Bottlenecks and Potentials
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-LFSCK_Performance_Study-Dong.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-LFSCK_Performance_Study-Dong.pdf)   
+
+LFSCK是一个很有用的工具，但是在使用过程中会对性能有影响，这个PPT主要是介绍使用的经验
+
+## 25.Lustre in the Compute Canada Federation and the Deployment of Beluga
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Compute_Canada_Deployment_Beluga-Guilbault.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Compute_Canada_Deployment_Beluga-Guilbault.pdf)  
+
+介绍了Lustre在Compute Canada中的使用
+
+## 26. Un-scratching Lustre
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Unscratching_Lustre-Harr.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Unscratching_Lustre-Harr.pdf)  
+
+具体内容没有看懂，发现了一个有意思的工具，[https://github.com/hpc/mpifileutils](https://github.com/hpc/mpifileutils)  
+这个工具支持并行拷贝，加速copy/remove等命令
+
+
+## 27. Introducing Pool Quotas
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Introducing_Pool_Quotas-Spitz.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Introducing_Pool_Quotas-Spitz.pdf)  
+
+目前Lustre支持uid和gid的quota，这个ppt介绍了对pool quota的支持
+
+## 28. Layering ZFS Pools on Lustre
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Layering_ZFS_Pools_on_Lustre-Mohr.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Layering_ZFS_Pools_on_Lustre-Mohr.pdf)   
+
+在Lustre中，除了ldiskfs，还提供了ZFS的方式，也就是一种软RAID的方式
+
+
+
+
+

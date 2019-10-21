@@ -1,0 +1,7 @@
+date: 2019-08-23 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 004'
+tags: Lustre开发者周报
+
+http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf

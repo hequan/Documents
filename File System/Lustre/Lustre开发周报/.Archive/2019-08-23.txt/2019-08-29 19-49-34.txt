@@ -1,0 +1,59 @@
+date: 2019-08-23 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 004'
+tags: Lustre开发者周报
+## 16.Lustre on Public Clouds‐Opportunities, Challenges & Learning
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf)   
+
+Lustre在公有云上的使用，目前看性能比较低
+
+## 17.Managing Lustre on AWS
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Managing_Lustre_on_AWS_FSX-Pollock.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Managing_Lustre_on_AWS_FSX-Pollock.pdf)  
+
+Amazon推出了FSx for Lustre，使用Amazon的块存储搭建Lustre，这个PPT介绍了如何在AWS的平台上搭建一套Lustre。
+有一个亮点是，使用HSM功能，以S3作为后端的数据归档。
+有一个坑: Be careful with very large directories. （LU-8047）
+从PPT中可以看出，Amazon是HSM的重度用户，做了很多的测试，目前在线上也有大量的使用。
+另外，他们还使用imagenet数据集跑了一下resnet50，使用tf，20个客户端，每个客户端8张V100，结果是最高102320 images/s。
+
+## 18.HSM, Data Movement, Tiering, Layouts and More
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-HSM_Data_Movement_Tiering_Layouts-Evans.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-HSM_Data_Movement_Tiering_Layouts-Evans.pdf)   
+
+HSM一直是Cray在推的一个功能，我们有同事也在尝试。
+数据分层很容易实现，比如搭建两套文件系统即可，一套放置热数据，另一套放置冷数据，难点在于如何让数据流动起来。
+HSM提供了这样的方式，不仅仅是数据分层和缓存，而是真正让数据流动起来。
+一个很有用的工具mirgrate
+
+## 19.Smart Policies for Data Placement and Storage Tiering of Lustre
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Smart_Policies_Data_Placement_Tiering_Lustre-LiXi.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Smart_Policies_Data_Placement_Tiering_Lustre-LiXi.pdf)   
+
+这个PPT介绍了Data Placement Policy，DPP是为了OST Pools而设计
+![](./_image/2019-08-23/2019-08-29-19-49-32.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

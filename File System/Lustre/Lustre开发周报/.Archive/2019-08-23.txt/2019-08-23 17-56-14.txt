@@ -1,0 +1,15 @@
+date: 2019-08-23 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 004'
+tags: Lustre开发者周报
+## 16.Lustre on Public Clouds‐Opportunities, Challenges & Learning
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf)   
+
+Lustre在公有云上的使用，目前看性能比较低
+
+## 17.Managing Lustre on AWS
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Managing_Lustre_on_AWS_FSX-Pollock.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Managing_Lustre_on_AWS_FSX-Pollock.pdf)  
+
+Amazon推出了FSx for Lustre，使用Amazon的块存储搭建Lustre，这个PPT介绍了如何在AWS的平台上搭建一套Lustre。
+有yi ge

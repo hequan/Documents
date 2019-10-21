@@ -1,0 +1,10 @@
+date: 2019-08-30 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 005'
+tags: Lustre开发者周报
+
+## 23. Cross-tier Unified Namespace Update
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Cross_Tier_Unified_Namespace-Chaarawi.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Cross_Tier_Unified_Namespace-Chaarawi.pdf)  
+
+通过DA

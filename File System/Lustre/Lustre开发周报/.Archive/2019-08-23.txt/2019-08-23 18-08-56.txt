@@ -1,0 +1,18 @@
+date: 2019-08-23 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 004'
+tags: Lustre开发者周报
+## 16.Lustre on Public Clouds‐Opportunities, Challenges & Learning
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf)   
+
+Lustre在公有云上的使用，目前看性能比较低
+
+## 17.Managing Lustre on AWS
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Managing_Lustre_on_AWS_FSX-Pollock.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Managing_Lustre_on_AWS_FSX-Pollock.pdf)  
+
+Amazon推出了FSx for Lustre，使用Amazon的块存储搭建Lustre，这个PPT介绍了如何在AWS的平台上搭建一套Lustre。
+有一个亮点是，使用HSM功能，以S3作为后端的数据归档。
+有一个坑: Be careful with very large directories. （LU-8047）
+从PPT中可以看出，Amazon是HSM的重度用户，做了很多的测试，目前在线上也有大量的使用。
+l

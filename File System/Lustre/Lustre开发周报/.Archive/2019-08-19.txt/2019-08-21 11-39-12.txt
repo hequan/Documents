@@ -1,0 +1,13 @@
+date: 2019-08-16 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 003'
+tags: Lustre开发者周报
+
+接着看LUG2019的PPT
+
+## 8. Lustre Security Update 
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Security-Buisson.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Security-Buisson.pdf)   
+
+这个PPT主要从User/node authentication、Access control、Multi-tenancy、 Encryption、Audit 五个方便讲述了Lustre在安全方面做的工作。
+- User/node authentication使用

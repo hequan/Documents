@@ -1,0 +1,19 @@
+date: 2019-08-30 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 005'
+tags: Lustre开发者周报
+
+## 23. Cross-tier Unified Namespace Update
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Cross_Tier_Unified_Namespace-Chaarawi.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Cross_Tier_Unified_Namespace-Chaarawi.pdf)  
+
+通过DAOS可以实现统一命名空间
+[https://github.com/daos-stack/daos](https://github.com/daos-stack/daos) 
+DAOS主要作用是可以发挥出NVM的性能，提供一个分布式NVM存储引擎
+
+## 24. A Performance Study of Lustre File System Checker: Bottlenecks and Potentials
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-LFSCK_Performance_Study-Dong.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-LFSCK_Performance_Study-Dong.pdf)   
+
+LFSCK是一个很有用的工具，但是在使用过程中会对性能有影响，这个PPT主要是介绍使用的经验
+
+## 25.Lustre in the Compute Canada Federation and the Deployment of Beluga

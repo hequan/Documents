@@ -1,0 +1,55 @@
+date: 2019-08-23 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 004'
+tags: Lustre开发者周报
+## 16.Lustre on Public Clouds‐Opportunities, Challenges & Learning
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Public_Clouds-Purushothaman.pdf)   
+
+Lustre在公有云上的使用，目前看性能比较低
+
+## 17.Managing Lustre on AWS
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Managing_Lustre_on_AWS_FSX-Pollock.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Managing_Lustre_on_AWS_FSX-Pollock.pdf)  
+
+Amazon推出了FSx for Lustre，使用Amazon的块存储搭建Lustre，这个PPT介绍了如何在AWS的平台上搭建一套Lustre。
+有一个亮点是，使用HSM功能，以S3作为后端的数据归档。
+有一个坑: Be careful with very large directories. （LU-8047）
+从PPT中可以看出，Amazon是HSM的重度用户，做了很多的测试，目前在线上也有大量的使用。
+另外，他们还使用imagenet数据集跑了一下resnet50，使用tf，20个客户端，每个客户端8张V100，结果是最高102320 images/s。
+
+## 18.HSM, Data Movement, Tiering, Layouts and More
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-HSM_Data_Movement_Tiering_Layouts-Evans.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-HSM_Data_Movement_Tiering_Layouts-Evans.pdf)   
+
+HSM一直是Cray在推的一个功能，我们有同事也在尝试。
+数据分层很容易实现，比如搭建两套文件系统即可，一套放置热数据，另一套放置冷数据，难点在于如何让数据流动起来。
+HSM提供了这样的方式，不仅仅是数据分层和缓存，而是真正让数据流动起来。
+一个很有用的工具mirgrate
+
+## 19.Smart Policies for Data Placement and Storage Tiering of Lustre
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Smart_Policies_Data_Placement_Tiering_Lustre-LiXi.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Smart_Policies_Data_Placement_Tiering_Lustre-LiXi.pdf)   
+
+这个PPT介绍了Data Placement Policy，DPP是为了OST Pools而设计
+![](./_image/2019-08-23/2019-08-29-19-49-32.png)
+
+
+最后可以达到某个效果，大文件放到Pool0中，镜像文件放到Pool1中，代码文件放到Pool2中
+![](./_image/2019-08-23/2019-08-29-19-52-01.png)
+
+
+## 20.Robinhood Reports: A New Robinhood Web Front to Help Users Find Their Data
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Robinhood_Reports-Hall.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Robinhood_Reports-Hall.pdf)  
+
+在文件系统使用过程中有一个问题，用户不知道自己的数据放在哪里了，但是从quota看使用了很多，所以如何去帮助用户找到他们的数据放在哪里很重要。Lustre本身并不提供这个功能，但是robinhood提供。
+除此之外，robinhood的界面还提供了丰富的展示功能，详见：[https://github.com/numericalalgorithmsgroup/robinhood-reports](https://github.com/numericalalgorithmsgroup/robinhood-reports) 
+
+## 21. Migratefs: Overlay Filesystem for Transparent, Distributed Migration of Active Data
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Migratefs_Overlay_Filesystem-Thiell.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Migratefs_Overlay_Filesystem-Thiell.pdf)  
+
+migratefs的作用是合并两个fs，提供一个统一的目录。
+migratefs本质上是一个fuse的文件系统
+![](./_image/2019-08-23/2019-08-30-11-48-19.png)
+
+## 22. Lustre 2.12 In Production
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_2.12_In_Production-Thiell.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_2.12_In_Production-Thiell.pdf)   
+
+ STANFORD RESEARCH COMPUTING CENTER介绍了他们在Lustre 2.12使用中的经验，目前已经部署了2MDS 72TB/8OSS 3PB的Lustre 2.12，PPT中给出了很多优化和调试的经验。

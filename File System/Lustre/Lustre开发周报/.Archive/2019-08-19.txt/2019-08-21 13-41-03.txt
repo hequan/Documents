@@ -1,0 +1,46 @@
+date: 2019-08-16 16:50
+app: markdown
+layout: 'post'
+title: 'Lustre开发者周报Vol 003'
+tags: Lustre开发者周报
+
+接着看LUG2019的PPT
+
+## 8. Lustre Security Update 
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Security-Buisson.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Lustre_Security-Buisson.pdf)   
+
+这个PPT主要从User/node authentication、Access control、Multi-tenancy、 Encryption、Audit 五个方便讲述了Lustre在安全方面做的工作。
+- User/node authentication使用Kerberos Authentication Protocol、Shared-Secret Key
+- Access control有两种方式：
+    - DAC (Discretionary Access Control)
+    - MAC (Mandatory Access Control)
+    - 需要依赖SELinux
+- Multi-tenancy有三种方式：
+    - Users cannot be root
+    - If Root is Possible on Clients
+    - make use of LNet routers
+- Encryption就是加密，也分为两种情况
+    - on the wire 很形象的表达
+    - data at rest
+- Audit
+    - 给用户提供审计的接口，可以查到所有Lustre访问的记录
+
+## 9. Long Distance Lustre Communication
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Long_Distance_Lustre-Gautam.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-Long_Distance_Lustre-Gautam.pdf)   
+
+数据迁移一直是数据中心存在的问题，有的拉专线，有的用卡车运磁盘，这里ExxonMobil给出了他们的解决方案，两个相距50KM的数据中心进行数据迁移。
+
+## 10. LNet Features Overview
+[http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-LNet_Feature_Overview-Shehata.pdf](http://cdn.opensfs.org/wp-content/uploads/2019/07/LUG2019-LNet_Feature_Overview-Shehata.pdf)  
+
+这个ppt主要介绍LNet的功能，b
+
+
+
+
+
+
+
+
+
+
