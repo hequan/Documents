@@ -1,9 +1,5 @@
-date: 2019-09-19 16:50
-app: markdown
-layout: 'post'
-title: 'Linux BIO流程'
-tags: Linux IO栈
 [TOC]
+
 本文的目的是搞清楚BIO和块设备读写流程，先贴一张图(内核中块设备操作流程)
 ![](./_image/2019-09-19-15-45-58.png)
 
