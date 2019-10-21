@@ -1,12 +1,29 @@
-date: 2019-09-19 16:50
-app: markdown
-layout: 'post'
-title: 'Linux read流程'
-tags: Linux IO栈
+Table of Contents
+=================
 
-[TOC]
+   * [1. 概述](#1-概述)
+   * [2. VFS与ext4](#2-vfs与ext4)
+      * [2.1 sys_read()](#21-sys_read)
+      * [2.2 vfs_read()](#22-vfs_read)
+         * [2.2.1 rw_verify_area()](#221-rw_verify_area)
+      * [2.3 do_sync_read()](#23-do_sync_read)
+         * [2.3.1 异步I/O](#231-异步io)
+         * [2.3.2 do_sync_read()函数](#232-do_sync_read函数)
+      * [2.4 generic_file_aio_read()](#24-generic_file_aio_read)
+      * [2.5 do_generic_file_read()](#25-do_generic_file_read)
+         * [2.5.1 address_space -&gt; readpage()方法](#251-address_space---readpage方法)
+         * [2.5.2 file_read_actor()](#252-file_read_actor)
+         * [2.5.3 mpage_readpage()](#253-mpage_readpage)
+      * [2.8 mpage_bio_submit()](#28-mpage_bio_submit)
+      * [2.9 小结](#29-小结)
+   * [3. 读数据返回](#3-读数据返回)
+      * [3.1 读进程的阻塞和继续执行过程](#31-读进程的阻塞和继续执行过程)
+      * [3.2 读数据返回过程](#32-读数据返回过程)
+
 
 # 1. 概述
+
+
 我们对系统调用read()非常熟悉，也常听说“零拷贝”。在看Linux内核源码时，有很多人会有一些困惑，比如：
 - 读文件的整个流程是怎样的?
 - 内核是如何Cache已经读取的文件数据?
